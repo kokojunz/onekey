@@ -57,7 +57,7 @@ EOF
 #------ 代码区 ------#
 # 🌱拉取仓库
 CR2(){
-    ql repo https://github.com/okyyds/faker3.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp|Coupon|update" "^jd[^_]|USER|utils|^JS|^TS|^JDJRValidator_|^ZooFaker|^sign|ql|sentNotify|JDSignValidator"
+    ql repo https://github.com/okyyds/yydspure.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp|Coupon|update" "^jd[^_]|USER|utils|^JS|^TS|^JDJRValidator_|^ZooFaker|^sign|ql|sentNotify|JDSignValidator"
 }
 CR3(){
     ql repo https://github.com/he1pu/JDHelp.git "jd_|jx_|getJDCookie" "Coupon|update" "^jd[^_]|USER|^sign|^ZooFaker|utils"
