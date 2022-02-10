@@ -409,7 +409,7 @@ export lsjdh="jdAward3" ##兑换100豆
 ### 使用 & 分隔，例如 东东乐园&东东萌宠
 export NOTIFY_SKIP_LIST=""
 
-# Faker2库环境变量
+# yydspure库环境变量
 ## 1、清空购物车
 export JD_CART_REMOVE=""
 export JD_CART_REMOVESIZE=""
