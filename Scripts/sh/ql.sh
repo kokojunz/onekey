@@ -80,7 +80,7 @@ docker_install() {
 }
 
 docker_install
-warn "Faker系列仓库一键安装配置，一键安装的青龙版本为2.9.3稳定版，小白回车到底，一路默认选择"
+warn "YYDS仓库一键安装配置，一键安装的青龙版本为2.9.3稳定版，小白回车到底，一路默认选择"
 # 配置文件保存目录
 echo -n -e "\e[33m一、请输入配置文件保存的绝对路径（示例：/root)，回车默认为当前目录:\e[0m"
 read jd_path
@@ -361,7 +361,7 @@ if [ "$access" != "2" ]; then
             docker exec -it $CONTAINER_NAME bash -c "sed -i \"s/ALLOW_NUM=40/ALLOW_NUM=100/\" /ql/ninja/backend/.env && cd /ql/ninja/backend && pm2 start"
         fi
         log "8.开始青龙内部配置"
-        docker exec -it $CONTAINER_NAME bash -c "$(curl -fsSL https://ghproxy.com/https://github.com/shufflewzc/VIP/blob/main/Scripts/sh/1customCDN.sh)"
+        docker exec -it $CONTAINER_NAME bash -c "$(curl -fsSL https://ghproxy.com/https://github.com/okyyds/onekey/blob/main/Scripts/sh/1customCDN.sh)"
     else
         warn "8.未检测到 token，取消内部配置"
     fi
