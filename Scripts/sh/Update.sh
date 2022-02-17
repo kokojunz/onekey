@@ -35,7 +35,7 @@ BreakHelpNum="BreakHelpNum=\"31-1000\""
 update_config() {
     curl -sL https://git.io/config.sh > $config_raw_path
     mv -b $config_raw_path $dir_config
-    sed -ri "s/GithubProxyUrl=\"https\:\/\/ghproxy.com\/\"/GithubProxyUrl=\"${GithubProxyUrl}\"/g" $config_config_path
+    sed -ri "s/GithubProxyUrl=\"https\:\/\/git.metauniverse-cn.com\/\"/GithubProxyUrl=\"${GithubProxyUrl}\"/g" $config_config_path
     sed -i "s/TG_BOT_TOKEN=\"\"/TG_BOT_TOKEN=\"${TG_BOT_TOKEN}\"/g" $config_config_path
     sed -i "s/TG_USER_ID=\"\"/TG_USER_ID=\"${TG_USER_ID}\"/g" $config_config_path
     sed -i "s/openCardBean=\"30\"/openCardBean=\"${openCardBean}\"/g" $config_config_path
