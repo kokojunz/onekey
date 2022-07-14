@@ -58,7 +58,7 @@ build_docker () {
 
 start_docker () {
     echo "正在启动 Docker 容器 . . ."
-    docker run -dit --restart=always --name="$container_name" --hostname="$container_name" mrwangzhe/pagermaid_modify <&1
+    docker run -dit --network=host --restart=always --name="$container_name" --hostname="$container_name" mrwangzhe/pagermaid_modify <&1
     echo
     echo "开始配置参数 . . ."
     echo "在登录后，请按 Ctrl + C 使容器在后台模式下重新启动。"
@@ -86,7 +86,7 @@ data_persistence () {
                     docker cp $container_name:/pagermaid/workdir $data_path
                     docker stop $container_name &>/dev/null
                     docker rm $container_name &>/dev/null
-                    docker run -dit -e PUID=$PUID -e PGID=$PGID -v $data_path/workdir:/pagermaid/workdir --restart=always --name="$container_name" --hostname="$container_name" mrwangzhe/pagermaid_modify <&1
+                    docker run -dit -e PUID=$PUID -e PGID=$PGID -v $data_path/workdir:/pagermaid/workdir --network=host --restart=always --name="$container_name" --hostname="$container_name" mrwangzhe/pagermaid_modify <&1
                     echo
                     echo "数据持久化操作完成。"
                     echo 
